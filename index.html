@@ -7,26 +7,43 @@
   <script defer src="script.js"></script>
 </head>
 <body>
-  <header>
-    <h1>Juan Andrés Bórquez</h1>
-    <p>Data Scientist | Machine Learning | Complex Networks</p>
-  </header>
+  <nav>
+    <ul>
+      <li><a href="#hero">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="mailto:schuffeneger@protonmail.ch">Contact</a></li>
+    </ul>
+  </nav>
 
-  <main>
+  <section id="hero">
+    <h1>Juan Andrés Bórquez</h1>
+    <p>Turning complex problems into elegant data-driven solutions.</p>
+    <p><strong>Data Scientist | Machine Learning | Network Analysis</strong></p>
+  </section>
+
+  <section id="about">
+    <h2>About Me</h2>
+    <p>I’m a Data Scientist with a background in Computer Engineering and a Master’s in Data Science. I specialize in machine learning, deep learning, and the analysis of complex networks. I love building useful and interpretable models that make a difference in real-world settings.</p>
+  </section>
+
+  <main id="projects">
     <h2>Featured Projects</h2>
     <div class="projects">
+
       <div class="project-card">
         <h3>🏠 Barcelona Housing Prices</h3>
         <p>Analysis of housing market prices in Barcelona using Python & Pandas.</p>
         <a href="projects/barcelona_housing_prices/README.md" target="_blank">View Project</a>
       </div>
 
-<div class="project-card">
-  <h3>🧠 Skin Lesion Classification with CNN</h3>
-  <p>This project focuses on the binary classification of over 10,000 skin lesion images (benign vs. malignant) using a custom-built Convolutional Neural Network (CNN) with under 250,000 parameters. It includes careful preprocessing, model design, early stopping, and evaluation using a confusion matrix. The model is designed to support medical professionals in melanoma detection.</p>
+      <div class="project-card">
+        <h3>🧠 Skin Lesion Classification with CNN</h3>
+        <p>Binary classification of 10,000+ skin lesion images using a CNN built under 250K parameters. Designed to assist melanoma detection in medical settings.</p>
         <a href="https://github.com/JuantxoCL/JuantxoCL.github.io/blob/main/projects/cnn_classification/CNN_digit_classifier.ipynb" target="_blank">View on GitHub</a> |
         <a href="https://colab.research.google.com/drive/1gLJ8ZmqzbqMT80wyOA8IQ73vgd3X1bhU?usp=sharing" target="_blank">Open in Colab</a>
       </div>
+
     </div>
   </main>
 
@@ -34,4 +51,5 @@
     <p>Contact: schuffeneger@protonmail.ch | <a href="https://www.linkedin.com/in/jabsit" target="_blank">LinkedIn</a></p>
   </footer>
 </body>
+
 </html>
