@@ -52,6 +52,31 @@ nav a:hover {
   margin: 5px 0;
 }
 
+/* Botones CV y LinkedIn */
+.about-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+  margin-top: 18px;
+}
+
+.cv-button, .linkedin-button {
+  background: #0a9396;
+  color: #fff;
+  border: none;
+  border-radius: 20px;
+  padding: 10px 22px;
+  font-size: 1em;
+  text-decoration: none;
+  transition: background 0.2s;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.09);
+  font-weight: bold;
+}
+.cv-button:hover, .linkedin-button:hover {
+  background: #005f73;
+  color: #fff;
+}
+
 /* About section */
 #about {
   max-width: 800px;
@@ -63,6 +88,25 @@ nav a:hover {
 #about h2 {
   font-size: 2em;
   margin-bottom: 15px;
+}
+
+/* Skills Badges */
+.skills-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 18px;
+  justify-content: center;
+}
+.badge {
+  background: #e9ecef;
+  color: #05668d;
+  border-radius: 12px;
+  padding: 6px 14px;
+  font-size: 0.96em;
+  font-weight: 600;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.07);
+  border: 1px solid #b0c4de;
 }
 
 /* Projects section */
@@ -150,7 +194,6 @@ body.dark .project-card {
   box-shadow: 0 0 12px rgba(0, 0, 0, 0.2);
 }
 
-
 .project-thumb {
   width: 100%;
   height: auto;
@@ -159,3 +202,187 @@ body.dark .project-card {
 }
 
 
+#hero {
+  background: linear-gradient(to right, #0a9396 60%, #94d2bd 100%);
+  color: white;
+  padding: 46px 0 24px 0;
+  text-align: center;
+  min-height: 310px;
+}
+
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0;
+  justify-content: center;
+}
+
+.hero-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#hero h1 {
+  font-size: 2.7em;
+  margin: 10px 0 5px 0;
+  letter-spacing: 1.5px;
+  font-weight: 800;
+  text-shadow: 0 3px 14px rgba(0,0,0,0.06);
+}
+
+.hero-role {
+  font-size: 1.18em;
+  color: #e9ecef;
+  font-weight: 600;
+  letter-spacing: 0.8px;
+  margin: 0 0 6px 0;
+  text-shadow: 0 1px 4px rgba(0,0,0,0.09);
+}
+
+.subtitle {
+  font-size: 1.08em;
+  color: #d8f3dc;
+  margin-bottom: 13px;
+  margin-top: 0;
+  font-weight: 400;
+  line-height: 1.4;
+  text-shadow: 0 2px 6px rgba(0,0,0,0.04);
+}
+
+.profile-pic {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 10px;
+  margin-right: 0;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.18);
+  border: 5px solid #e9ecef33;
+}
+
+/* Night Mode Styles */
+body.dark {
+  background: #171b1e;
+  color: #f0f2f5;
+}
+
+body.dark nav,
+body.dark #hero {
+  background: linear-gradient(to right, #1b263b 60%, #264653 100%) !important;
+  color: #f0f2f5;
+}
+
+body.dark .project-card {
+  background: #222c34;
+  color: #f0f2f5;
+  border: 1px solid #293040;
+}
+
+body.dark #about,
+body.dark #projects,
+body.dark .skills-badges {
+  background: none !important;
+  color: #f0f2f5;
+}
+
+body.dark .badge {
+  background: #283943;
+  color: #99c1b9;
+  border: 1px solid #436672;
+}
+
+body.dark .cv-button,
+body.dark .linkedin-button,
+body.dark .toggle-dark {
+  background: #436672;
+  color: #e9ecef;
+}
+
+body.dark .cv-button:hover,
+body.dark .linkedin-button:hover,
+body.dark .toggle-dark:hover {
+  background: #8ecae6;
+  color: #222c34;
+}
+
+body.dark footer {
+  background: none;
+  color: #c9d1d9;
+}
+
+.toggle-dark {
+  background: #eee;
+  color: #333;
+  border: none;
+  border-radius: 20px;
+  padding: 10px 20px;
+  font-size: 1em;
+  font-weight: bold;
+  margin-left: 8px;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+.toggle-dark:hover {
+  background: #0a9396;
+  color: #fff;
+}
+
+/* ...tu CSS de antes... */
+
+/* Efecto foto perfil */
+.profile-pic {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 10px;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.18);
+  border: 5px solid #e9ecef33;
+  transition: transform 0.42s cubic-bezier(.23,1.21,.53,.98), box-shadow 0.23s;
+}
+.profile-pic:hover {
+  transform: rotateZ(-2deg) scale(1.045);
+  box-shadow: 0 8px 32px rgba(20,20,20,0.18);
+}
+
+/* Typed.js */
+.typed-text {
+  display: block;
+  font-size: 1.13em;
+  color: #ffe1a8;
+  margin: 10px 0 5px 0;
+  min-height: 36px;
+  letter-spacing: 0.5px;
+  font-family: inherit;
+  font-weight: 700;
+}
+
+/* Botón scroll-top */
+.scroll-top {
+  position: fixed;
+  bottom: 38px;
+  right: 36px;
+  padding: 12px 15px;
+  border-radius: 50%;
+  background: #0a9396;
+  color: white;
+  font-size: 1.35em;
+  border: none;
+  box-shadow: 0 3px 13px rgba(10,40,60,0.12);
+  cursor: pointer;
+  z-index: 100;
+  display: none;
+  transition: background 0.19s;
+}
+.scroll-top:hover { background: #005f73;}
+
+/* Animación en proyectos con AOS */
+[data-aos] { opacity: 0; transition-property: opacity, transform;}
+[data-aos].aos-animate { opacity: 1; }
+
+/* Night mode y demás (tu código actual) */
+body.dark { /* ... */ }
+/* ... resto de night mode ... */

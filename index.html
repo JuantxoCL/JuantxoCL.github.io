@@ -4,7 +4,9 @@
   <meta charset="UTF-8" />
   <title>Juan Andrés Bórquez | Data Scientist Portfolio</title>
   <link rel="stylesheet" href="style.css" />
-  <script defer src="script.js"></script>
+  <!-- Animación scroll (AOS) -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
+  <link rel="icon" href="favicon.ico" type="image/x-icon" />
 </head>
 <body>
   <nav>
@@ -17,78 +19,131 @@
   </nav>
 
 <section id="hero">
-  <img src="perfil.jpeg" alt="Juan Andrés Bórquez" class="profile-pic">
-  <h1>Juan Andrés Bórquez</h1>
-  <p>Turning complex problems into elegant data-driven solutions.</p>
-  <p><strong>Data Scientist | Machine Learning | Network Analysis</strong></p>
+  <div class="hero-content vertical">
+    <img src="perfil.jpeg" alt="Juan Andrés Bórquez" class="profile-pic" />
+    <div class="hero-text">
+      <h1>Juan Andrés Bórquez</h1>
+      <!-- Frase animada -->
+      <span id="typed" class="typed-text"></span>
+      <p class="hero-role">Data Scientist & Machine Learning Enthusiast</p>
+      <p class="subtitle">Transforming complex data into actionable insights and elegant solutions.</p>
+      <div class="about-buttons">
+        <a href="cv_juan_andres_borquez.pdf" class="cv-button" target="_blank">Download CV</a>
+        <a href="https://www.linkedin.com/in/jabsit" class="linkedin-button" target="_blank">LinkedIn</a>
+        <button id="toggle-dark" class="toggle-dark">🌙 Night Mode</button>
+      </div>
+    </div>
+  </div>
 </section>
 
+<section id="about">
+  <h2>About Me</h2>
+  <p>
+    I’m a Data Scientist with a background in Computer Engineering and a Master’s in Data Science from La Salle University (Barcelona).
+    My passion lies in transforming raw, messy data into clear insights and real world impact. I thrive on building models that not only achieve high performance but also remain interpretable and actionable for stakeholders.<br><br>
+    I specialize in machine learning, deep learning, and complex network analysis, and enjoy solving business challenges in dynamic environments especially those where the “why” matters as much as the “what”. Whether it’s improving predictions, discovering patterns, or telling stories through data visualization, I always aim to deliver work that is reliable, scalable, and valuable.<br><br>
+    Curious by nature and driven by results, I’m always learning and love collaborating with cross-functional teams. My goal: to turn ambiguity into opportunity using data and to keep growing as a scientist, engineer, and communicator.<br><br>
+    When I’m not coding, you’ll probably find me cooking, hiking, or tinkering with side projects.
+  </p>
+  <div class="skills-badges">
+    <span class="badge">Python</span>
+    <span class="badge">Pandas</span>
+    <span class="badge">scikit-learn</span>
+    <span class="badge">TensorFlow</span>
+    <span class="badge">XGBoost</span>
+    <span class="badge">SHAP</span>
+    <span class="badge">SQL</span>
+    <span class="badge">EDA</span>
+    <span class="badge">Dashboards</span>
+    <span class="badge">Data Storytelling</span>
+  </div>
+</section>
 
-  <section id="about">
-    <h2>About Me</h2>
-    <p>I’m a Data Scientist with a background in Computer Engineering and a Master’s in Data Science. I specialize in machine learning, deep learning, and the analysis of complex networks. I love building useful and interpretable models that make a difference in real-world settings.</p>
-  </section>
+<main id="projects">
+  <h2>Featured Projects</h2>
+  <div class="projects">
 
-  <main id="projects">
-    <h2>Featured Projects</h2>
-    <div class="projects">
-
-   <div class="project-card">
-  <img src="projects/barcelona_housing_prices/preview.png" alt="Barcelona Housing Prices" class="project-thumb">
-  <h3>🏠 Predicting Rental Prices in Barcelona</h3>
-  <p>This project uses property data from Barcelona to predict rental price per square meter using Bagging, Random Forest, and CatBoost models. SHAP analysis was also applied to explain model decisions. The Random Forest model achieved the best R² score across evaluations.</p>
-  <a href="https://github.com/JuantxoCL/JuantxoCL.github.io/blob/main/projects/barcelona_housing_prices/barcelona_housing_prices.ipynb" target="_blank">View on GitHub</a> |
-  <a href="https://colab.research.google.com/drive/10vrFo-QAxGdctyDTtVUciD2tQLNYldvW?usp=sharing" target="_blank">Open in Colab</a>
-</div>
-
-
-
-   <div class="project-card">
-  <img src="projects/cnn_classification/preview.png" alt="Skin Lesion CNN" class="project-thumb">
-  <h3>🧠 Skin Lesion Classification with CNN</h3>
-  <p>Binary classification of 10,000+ skin lesion images using a CNN built under 250K parameters...</p>
-  <a href="https://github.com/JuantxoCL/JuantxoCL.github.io/blob/main/projects/cnn_classification/CNN_digit_classifier.ipynb" target="_blank">View on GitHub</a> |
-  <a href="https://colab.research.google.com/drive/1gLJ8ZmqzbqMT80wyOA8IQ73vgd3X1bhU?usp=sharing" target="_blank">Open in Colab</a>
-</div>
-
-<div class="project-card">
-  <img src="projects/equine_survival_prediction/preview.png" alt="Equine Prediction" class="project-thumb">
-  <h3>🐴 Equine Survival Prediction with Neural Networks</h3>
-  <p>This project uses clinical data from horses with colic to predict survival outcomes (live, die, or euthanized) using a custom-built neural network. The process included data imputation, categorical encoding, normalization, and neural architecture design in Keras and TensorFlow. The model achieved a 73% accuracy and highlighted the importance of features like total protein and pulse rate in survival prediction.</p>
-  <a href="https://github.com/JuantxoCL/JuantxoCL.github.io/blob/main/projects/equine_survival_prediction/equine_survival_prediction.ipynb" target="_blank">View on GitHub</a>
-  <a href="https://colab.research.google.com/drive/1u73JtQIb_P_Rc3Dnf8Iyf7_tywvZewlF?usp=sharing" target="_blank">Open in Colab</a>
-</div>
-
-<div class="project-card">
-  <img src="projects/marketing_campaign_dashboard/preview.png" alt="Dashboard Preview" class="project-thumb">
-  <h3>📊 Marketing Campaign Dashboard</h3>
-  <p>An interactive dashboard analyzing a multinational marketing campaign using demographic and behavioral insights.</p>
-  <a href="https://lookerstudio.google.com/reporting/ded45a85-7721-43fa-a5b1-5f893f72c277" target="_blank">View on Looker Studio</a> |
-  <a href="projects/marketing_campaign_dashboard/Marketing_Campaign_Insights_Dashboard.pdf" target="_blank">View PDF</a>
-</div>
-
-<div class="project-card">
-  <h3>📱 App Review Sentiment Analysis</h3>
-  <img src="projects/sentiment_analysis_naive_bayes/preview.png" class="project-thumb" alt="Preview Sentiment Analysis">
-  <p>Sentiment analysis model using Naive Bayes to classify Play Store app reviews as positive, negative, or neutral. Includes preprocessing, model optimization, and evaluation.</p>
-  <a href="https://github.com/JuantxoCL/JuantxoCL.github.io/blob/main/projects/sentiment_analysis_naive_bayes/sentiment_analysis_naive_bayes.ipynb" target="_blank">View on GitHub</a> |
-  <a href="https://colab.research.google.com/drive/1JvuQFFh0AXDWhOUbRdaF0OxUitivXKSx?usp=sharing" target="_blank">Open in Colab</a>
-</div>
-
-<div class="project-card">
-  <h3>🚗 Car Insurance Claim Prediction</h3>
-  <img src="projects/car_insurance_claim_xgboost/preview.png" class="project-thumb" alt="Preview Car Insurance Claim">
-  <p>Advanced ML pipeline for predicting car insurance claims using XGBoost, Random Forest, and SHAP. Includes EDA, feature engineering, statistical analysis, class balancing and interpretability.</p>
-  <a href="https://github.com/JuantxoCL/JuantxoCL.github.io/blob/main/projects/car_insurance_claim_xgboost/car_insurance_claim_xgboost.ipynb" target="_blank">View on GitHub</a> |
-  <a href="https://drive.google.com/file/d/1UtRSxLXqFWIbHfcIvFadiEkzdgEC1hyT/view?usp=sharing" target="_blank">Open in Colab</a>
-</div>
-
+    <div class="project-card" data-aos="fade-up">
+      <img src="projects/barcelona_housing_prices/preview.png" alt="Barcelona Housing Prices" class="project-thumb">
+      <h3>🏠 Predicting Rental Prices in Barcelona</h3>
+      <p>This project uses property data from Barcelona to predict rental price per square meter using Bagging, Random Forest, and CatBoost models. SHAP analysis was also applied to explain model decisions. The Random Forest model achieved the best R² score across evaluations.</p>
+      <a href="https://github.com/JuantxoCL/JuantxoCL.github.io/blob/main/projects/barcelona_housing_prices/barcelona_housing_prices.ipynb" target="_blank">View on GitHub</a> |
+      <a href="https://colab.research.google.com/drive/10vrFo-QAxGdctyDTtVUciD2tQLNYldvW?usp=sharing" target="_blank">Open in Colab</a>
     </div>
-  </main>
 
-  <footer>
-    <p>Contact: schuffeneger@protonmail.ch | <a href="https://www.linkedin.com/in/jabsit" target="_blank">LinkedIn</a></p>
-  </footer>
+    <div class="project-card" data-aos="fade-up">
+      <img src="projects/cnn_classification/preview.png" alt="Skin Lesion CNN" class="project-thumb">
+      <h3>🧠 Skin Lesion Classification with CNN</h3>
+      <p>Binary classification of 10,000+ skin lesion images using a CNN built under 250K parameters. The workflow includes preprocessing, model building, early stopping, and evaluation through confusion matrices and metrics. Designed for interpretable medical AI.</p>
+      <a href="https://github.com/JuantxoCL/JuantxoCL.github.io/blob/main/projects/cnn_classification/CNN_digit_classifier.ipynb" target="_blank">View on GitHub</a> |
+      <a href="https://colab.research.google.com/drive/1gLJ8ZmqzbqMT80wyOA8IQ73vgd3X1bhU?usp=sharing" target="_blank">Open in Colab</a>
+    </div>
+
+    <div class="project-card" data-aos="fade-up">
+      <img src="projects/equine_survival_prediction/preview.png" alt="Equine Prediction" class="project-thumb">
+      <h3>🐴 Equine Survival Prediction with Neural Networks</h3>
+      <p>This project uses clinical data from horses with colic to predict survival outcomes (live, die, or euthanized) using a custom-built neural network. The process included data imputation, categorical encoding, normalization, and neural architecture design in Keras and TensorFlow. The model achieved a 73% accuracy and highlighted the importance of features like total protein and pulse rate in survival prediction.</p>
+      <a href="https://github.com/JuantxoCL/JuantxoCL.github.io/blob/main/projects/equine_survival_prediction/equine_survival_prediction.ipynb" target="_blank">View on GitHub</a> |
+      <a href="https://colab.research.google.com/drive/1u73JtQIb_P_Rc3Dnf8Iyf7_tywvZewlF?usp=sharing" target="_blank">Open in Colab</a>
+    </div>
+
+    <div class="project-card" data-aos="fade-up">
+      <img src="projects/marketing_campaign_dashboard/preview.png" alt="Dashboard Preview" class="project-thumb">
+      <h3>📊 Marketing Campaign Dashboard</h3>
+      <p>An interactive dashboard analyzing a multinational marketing campaign using demographic and behavioral insights. Built in Looker Studio for business impact analysis.</p>
+      <a href="https://lookerstudio.google.com/reporting/ded45a85-7721-43fa-a5b1-5f893f72c277" target="_blank">View on Looker Studio</a> |
+      <a href="projects/marketing_campaign_dashboard/Marketing_Campaign_Insights_Dashboard.pdf" target="_blank">View PDF</a>
+    </div>
+
+    <div class="project-card" data-aos="fade-up">
+      <img src="projects/sentiment_analysis_naive_bayes/preview.png" class="project-thumb" alt="Preview Sentiment Analysis">
+      <h3>📱 App Review Sentiment Analysis</h3>
+      <p>Sentiment analysis model using Naive Bayes to classify Play Store app reviews as positive, negative, or neutral. Includes preprocessing, model optimization, and evaluation.</p>
+      <a href="https://github.com/JuantxoCL/JuantxoCL.github.io/blob/main/projects/sentiment_analysis_naive_bayes/sentiment_analysis_naive_bayes.ipynb" target="_blank">View on GitHub</a> |
+      <a href="https://colab.research.google.com/drive/1JvuQFFh0AXDWhOUbRdaF0OxUitivXKSx?usp=sharing" target="_blank">Open in Colab</a>
+    </div>
+
+    <div class="project-card" data-aos="fade-up">
+      <img src="projects/car_insurance_claim_xgboost/preview.png" class="project-thumb" alt="Preview Car Insurance Claim">
+      <h3>🚗 Car Insurance Claim Prediction</h3>
+      <p>Advanced ML pipeline for predicting car insurance claims using XGBoost, Random Forest, and SHAP. Includes EDA, feature engineering, statistical analysis, class balancing and interpretability.</p>
+      <a href="https://github.com/JuantxoCL/JuantxoCL.github.io/blob/main/projects/car_insurance_claim_xgboost/car_insurance_claim_xgboost.ipynb" target="_blank">View on GitHub</a> |
+      <a href="https://drive.google.com/file/d/1UtRSxLXqFWIbHfcIvFadiEkzdgEC1hyT/view?usp=sharing" target="_blank">Open in Colab</a>
+    </div>
+
+  </div>
+</main>
+
+<footer>
+  <p>Contact: schuffeneger@protonmail.ch | <a href="https://www.linkedin.com/in/jabsit" target="_blank">LinkedIn</a></p>
+</footer>
+
+<!-- SCROLL TO TOP BUTTON -->
+<button onclick="window.scrollTo({top:0,behavior:'smooth'})" class="scroll-top" title="Back to top">⬆</button>
+
+<!-- LIBRERÍAS EXTERNAS -->
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+<script src="script.js"></script>
+<script>
+  // Inicializa AOS (animación scroll)
+  AOS.init({ duration: 800, once: true });
+
+  // Typed.js para frase animada en el hero
+  var typed = new Typed("#typed", {
+    strings: [
+      "Turning data into decisions.",
+      "Model interpretability advocate.",
+      "Storytelling with data.",
+      "Complex networks enthusiast.",
+      "Data Science & Machine Learning."
+    ],
+    typeSpeed: 42,
+    backSpeed: 20,
+    backDelay: 1100,
+    startDelay: 400,
+    loop: true
+  });
+</script>
 </body>
-
 </html>
